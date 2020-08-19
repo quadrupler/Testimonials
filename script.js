@@ -4,7 +4,7 @@ const rightButton = document.getElementById('right-button')
 
 const name = document.getElementById('name')
 const title = document.getElementById('title')
-const description = document.getElementById('testimonial')
+const description = document.getElementById('description')
 
 window.addEventListener('load', (event ) => {
 
@@ -36,7 +36,13 @@ const Testimonial = (name, title, description) =>
 
  let myTestimonial = Testimonial('bob','designer','amazing much wow')
 // create some fake testimonials for development purposes
-
+let testimonials = [
+    Testimonial('bob','designer','amazing much wow'),
+    Testimonial('timmy','developer','yes thank you very amazing thank you'),
+    Testimonial('larry','idk','amazing wow'),
+    Testimonial('jane','marketeur','much review much wow'),
+    Testimonial('martini','gamer','this is amazingg!')
+]
 
 
 // When I load the page I should be served a random review
@@ -44,8 +50,21 @@ const Testimonial = (name, title, description) =>
 
 const onLeftButtonPressed = (event) => 
 {
-    position--
+    if (position < testimonials.length) {
+        rightButton.disabled = false
+    }
+   
     (!position) ? leftButton.disabled = true : leftButton.disabled = false
+    if (position === 0) {
+        name.innerHTML = testimonials[position].name
+        title.innerHTML = testimonials[position].title
+        description.innerHTML = testimonials[position].description
+    } else {
+        position--
+        name.innerHTML = testimonials[position].name
+        title.innerHTML = testimonials[position].title
+        description.innerHTML = testimonials[position].description
+    }
  // disable left arrow on page load
 //  enable when the position ISN'T zero
 }
@@ -54,8 +73,15 @@ const onLeftButtonPressed = (event) =>
 // incremenets global position variable by one and updates view to show the new testimonial in the array
 const onRightButtonPressed = (event) =>
 {
-    position++
-    name.innerHTML = myTestimonial.name
+    if (position === testimonials.length - 2) {
+        rightButton.disabled = true
+    }
+    if (position < testimonials.length - 1) {
+        position++
+        name.innerHTML = testimonials[position].name
+        title.innerHTML = testimonials[position].title
+        description.innerHTML = testimonials[position].description
+    } 
     leftButton.disabled = false
 }
 
