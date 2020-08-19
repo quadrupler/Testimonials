@@ -3,7 +3,7 @@ Just a basic testimonials section you'd typically see on any site! Just trying t
 
 [View Project](https://quadrupler.github.io/Testimonials/)
 
-!(Image of Testimonial Section)[https://github.com/quadrupler/Testimonials/blob/master/Screen%20Shot%202020-08-18%20at%2011.36.42%20PM.png]
+![Image of Testimonial Section](https://github.com/quadrupler/Testimonials/blob/master/Screen%20Shot%202020-08-18%20at%2011.36.42%20PM.png)
 ## Features
 
 - [x] When I click the right button it will show me a new testimonials
