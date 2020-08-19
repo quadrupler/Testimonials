@@ -2,6 +2,8 @@
 Just a basic testimonials section you'd typically see on any site! Just trying to get some DOM practice in before I move onto more complex subjects such as React etc. Will probably complete a few more pet projects like this.
 
 [View Project](https://quadrupler.github.io/Testimonials/)
+
+!(Image of Testimonial Section)[Screen Shot 2020-08-18 at 11.36.42 PM.png]
 ## Features
 
 - [x] When I click the right button it will show me a new testimonials
